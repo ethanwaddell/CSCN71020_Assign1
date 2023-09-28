@@ -25,6 +25,7 @@ void main() {
 		subtract();
 	}
 
+	return 0;
 }
 
 void printWelcomeMenu() {
@@ -50,10 +51,13 @@ void add() {
 }
 
 void subtract() {
-	int num1, num2;
+	double num1, num2, result;
 
-	num1 = 0;
-	num2 = 42;
+	printf("Enter the first value:");
+	scanf_s("%lf", &num1);
+	printf("Enter the second value:");
+	scanf_s("%lf", &num2);
 
-	int result = num2 / num1;
+	result = num1 - num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
 }
